@@ -71,16 +71,13 @@
   .desc-hero {
     @apply text-xl font-light;
   }
-  .body-small {
-    @apply text-sm;
-  }
   .body-base {
     @apply text-base;
   }
-  .subtitle {
-    @apply text-3xl font-medium;
+  .title {
+    @apply text-4xl font-semibold tracking-tight text-primary sm:text-5xl mx-auto text-center text-black dark:text-white;
   }
-  .heading {
-    @apply font-semibold text-2xl;
+  .title-desc {
+    @apply text-sm lg:text-base max-w-2xl mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300;
   }
 }

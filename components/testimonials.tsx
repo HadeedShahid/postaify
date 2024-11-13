@@ -6,8 +6,8 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 const Testimonials = () => {
   return (
     <div className="text-center mt-40">
-      <h2 className="subtitle">Used by entreprenurs</h2>
-      <p className="body-base">
+      <h2 className="title">Used by entreprenurs</h2>
+      <p className="title-desc my-4">
         Proactiv is used by serial entrepreneurs and overachievers.
       </p>
       <div className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">

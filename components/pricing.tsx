@@ -49,12 +49,8 @@ export default function Pricing() {
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary">
-            Pricing
-          </h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-primary sm:text-5xl">
-            Choose the right plan for you
-          </p>
+          <h2 className="title-desc">Pricing</h2>
+          <p className="mt-2 title">Choose the right plan for you</p>
         </div>
         <div className="mt-6 flex items-center justify-center gap-x-4">
           <span className="text-sm font-semibold leading-6 text-primary">
