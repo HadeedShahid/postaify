@@ -6,13 +6,13 @@ import { ContainerScroll } from "./ui/container-scroll-animation";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative">
       <Navbar />
       <div className="flex flex-col overflow-hidden">
         <ContainerScroll
           titleComponent={
             <div className="bg-transparent flex flex-col justify-center text-center gap-y-12 mt-24 mb-20">
-              <div className="flex flex-col max-w-4xl mx-auto gap-y-5">
+              <div className="flex flex-col mx-auto gap-y-5">
                 <h1 className="title-hero">
                   Generate Images, Text and Videos with AI
                 </h1>
@@ -22,7 +22,9 @@ const Hero = () => {
                   content with a single click.
                 </h2>
               </div>
-              <Button className="mx-auto">Book a demo</Button>
+              <Button className="mx-auto" size={"lg"}>
+                Book a demo
+              </Button>
             </div>
           }
         >
