@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body className="max-w-7xl m-auto">{children}</body>
+      <body className="relative">
+        <div className="max-w-7xl m-auto">{children}</div>
+      </body>
     </html>
   );
 }
