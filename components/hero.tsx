@@ -14,7 +14,7 @@ const Hero = () => {
             <div className="bg-transparent flex flex-col justify-center text-center gap-y-12 mt-24 mb-20">
               <div className="flex flex-col mx-auto gap-y-5">
                 <h1 className="title-hero">
-                  Generate Images, Text and Videos with AI
+                  Supercharge your Social Media Growth with AI
                 </h1>
                 <h2 className="desc-hero max-w-2xl mx-auto">
                   Everything AI seamlessly integrated all the modern AI
