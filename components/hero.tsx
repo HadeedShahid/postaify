@@ -6,9 +6,10 @@ import { ContainerScroll } from "./ui/container-scroll-animation";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative">
+    <div className="flex flex-col">
+      <div className="absolute h-[90rem] w-full dark:bg-dot-white/[0.2] bg-dot-black/[0.15] -z-10 left-0" />
       <Navbar />
-      <div className="flex flex-col overflow-hidden">
+      <div className="flex flex-col overflow-hidden pb-20">
         <ContainerScroll
           titleComponent={
             <div className="bg-transparent flex flex-col justify-center text-center gap-y-12 mt-24 mb-20">
