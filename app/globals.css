@@ -66,18 +66,18 @@
 }
 @layer utilities {
   .title-hero {
-    @apply text-8xl font-semibold leading-[6rem] tracking-normal;
+    @apply text-8xl font-semibold leading-[6rem] tracking-normal text-neutral-700;
   }
   .desc-hero {
-    @apply text-xl font-light;
+    @apply text-xl font-light text-neutral-700;
   }
   .body-base {
-    @apply text-base;
+    @apply text-base text-neutral-700;
   }
   .title {
-    @apply text-4xl font-semibold tracking-tight text-primary sm:text-5xl mx-auto text-center text-black dark:text-white;
+    @apply text-4xl font-semibold tracking-tight text-primary sm:text-5xl mx-auto text-center text-neutral-700 dark:text-white;
   }
   .title-desc {
-    @apply text-sm lg:text-base max-w-2xl mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300;
+    @apply text-sm lg:text-base max-w-2xl mx-auto text-neutral-700 text-center font-normal dark:text-neutral-300;
   }
 }
