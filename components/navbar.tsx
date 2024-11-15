@@ -12,7 +12,7 @@ const Navbar = () => {
         alt="Postaify logo"
       />
 
-      <div className="flex gap-4">
+      <div className="hidden flex gap-4 md:block">
         <Button variant={"ghost"}>Register</Button>
         <Button>Book a demo</Button>
       </div>

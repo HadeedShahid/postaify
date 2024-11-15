@@ -66,10 +66,10 @@
 }
 @layer utilities {
   .title-hero {
-    @apply text-8xl font-semibold leading-[6rem] tracking-normal;
+    @apply text-5xl leading-[3rem] md:text-8xl font-semibold md:leading-[6rem] tracking-normal;
   }
   .desc-hero {
-    @apply text-xl font-light;
+    @apply text-sm md:text-xl font-light;
   }
   .body-base {
     @apply text-base;

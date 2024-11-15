@@ -14,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={GeistSans.className}>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body className="relative">
         <div className="max-w-7xl m-auto">{children}</div>
       </body>
