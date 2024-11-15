@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="flex flex-col overflow-hidden pb-20">
         <ContainerScroll
           titleComponent={
-            <div className="bg-transparent flex flex-col justify-center text-center gap-y-12 mt-15 mb-20">
+            <div className="bg-transparent flex flex-col justify-center text-center gap-y-12 mt-20 md:mt-24 mb-20">
               <div className="flex flex-col mx-auto gap-y-5">
                 <h1 className="title-hero">
                   <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text">
