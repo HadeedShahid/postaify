@@ -15,7 +15,7 @@ function FeatureGrid() {
     {
       title: "Built for everyone",
       description:
-        "Built for solopreneurs, startups, dreamers, thinkers and doers.",
+        "Built for solopreneurs, startups, Marketers, dreamers and doers.",
       icon: <IconTerminal2 />,
     },
     {

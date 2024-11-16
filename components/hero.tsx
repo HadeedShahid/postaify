@@ -3,6 +3,7 @@ import Navbar from "./navbar";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { ContainerScroll } from "./ui/container-scroll-animation";
+import GetQoute from "./join-waitlist-form";
 
 const Hero = () => {
   return (
@@ -28,6 +29,7 @@ const Hero = () => {
               <Button className="mx-auto" size={"lg"}>
                 Book a demo
               </Button>
+              <GetQoute></GetQoute>
             </div>
           }
         >
