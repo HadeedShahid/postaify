@@ -70,9 +70,7 @@ export default function Pricing() {
             <div
               key={plan.name}
               className={`rounded-3xl p-8 ring-1 ring-gray-200 xl:p-10 ${
-                plan.recommended
-                  ? "bg-primary/5 ring-2 ring-primary"
-                  : "bg-background"
+                plan.recommended ? "ring-2 ring-teal-400" : "bg-background"
               }`}
             >
               <div className="flex items-center justify-between gap-x-4">
@@ -80,7 +78,7 @@ export default function Pricing() {
                   {plan.name}
                 </h3>
                 {plan.recommended && (
-                  <span className="text-white rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold leading-5 text-primary bg-gradient-to-r from-rose-500 to-orange-500">
+                  <span className="text-white rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold leading-5 text-primary bg-gradient-to-r from-purple-500 to-teal-500">
                     Recommended
                   </span>
                 )}

@@ -21,9 +21,8 @@ const Hero = () => {
                   your Social Media with AI
                 </h1>
                 <h2 className="desc-hero max-w-2xl md:max-w-2xl  mx-auto">
-                  Everything AI seamlessly integrated all the modern AI
-                  generation tools into one platform so that you can generate
-                  content with a single click.
+                  Postaify makes social growth simple. Create, plan, and scale
+                  your social media content effortlessly with just a click.
                 </h2>
               </div>
               <Button className="mx-auto" size={"lg"}>

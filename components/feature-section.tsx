@@ -45,11 +45,12 @@ function FeaturesSectionDemo() {
   return (
     <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
       <div className="px-8">
-        <h4 className="title">Packed with thousands of features</h4>
+        <h4 className="title">Empower Your Growth with Core Features</h4>
 
         <p className={twMerge("title-desc", "my-4")}>
-          From Image generation to video generation, Everything AI has APIs for
-          literally everything. It can even create this website copy for you.
+          From automated content generation to custom growth strategies, our
+          platform provides everything you need to dominate your social media
+          effortlessly.
         </p>
       </div>
 

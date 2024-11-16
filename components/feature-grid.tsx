@@ -13,9 +13,9 @@ import {
 function FeatureGrid() {
   const features = [
     {
-      title: "Built for developers",
+      title: "Built for everyone",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
+        "Built for solopreneurs, startups, dreamers, thinkers and doers.",
       icon: <IconTerminal2 />,
     },
     {
@@ -36,8 +36,8 @@ function FeatureGrid() {
       icon: <IconCloud />,
     },
     {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats",
+      title: "Regional Pricing",
+      description: "Because why settle for less when you can pay more?",
       icon: <IconRouteAltLeft />,
     },
     {
@@ -54,7 +54,8 @@ function FeatureGrid() {
     },
     {
       title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
+      description:
+        "We just ran out of copy ideas. Accept our sincere apologies",
       icon: <IconHeart />,
     },
   ];
