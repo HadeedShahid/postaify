@@ -80,7 +80,7 @@ export default function Pricing() {
                   {plan.name}
                 </h3>
                 {plan.recommended && (
-                  <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold leading-5 text-primary">
+                  <span className="text-white rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold leading-5 text-primary bg-gradient-to-r from-rose-500 to-orange-500">
                     Recommended
                   </span>
                 )}
@@ -92,9 +92,7 @@ export default function Pricing() {
                 <span className="text-4xl font-bold tracking-tight text-primary">
                   ${isYearly ? plan.yearlyPrice : plan.monthlyPrice}
                 </span>
-                <span className="text-sm font-semibold leading-6 text-muted-foreground">
-                  {isYearly ? "/year" : "/month"}
-                </span>
+                <span className="text-sm font-semibold leading-6 text-muted-foreground"></span>
               </p>
               {isYearly && (
                 <div className="mt-2">

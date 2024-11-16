@@ -10,9 +10,10 @@ const Navbar = () => {
         width={150}
         height={100}
         alt="Postaify logo"
+        className="w-32 md:w-40"
       />
 
-      <div className="hidden flex gap-4 md:block">
+      <div className="hidden md:flex gap-4">
         <Button variant={"ghost"}>Register</Button>
         <Button>Book a demo</Button>
       </div>

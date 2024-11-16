@@ -30,7 +30,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+    <section className="w-full py-24 md:py-24 lg:py-32 bg-white">
       <div className="container px-4 md:px-6">
         <h2 className="title mb-8">Frequently Asked Questions</h2>
         <Accordion

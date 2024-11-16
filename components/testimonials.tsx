@@ -5,7 +5,7 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 const Testimonials = () => {
   return (
-    <div className="text-center mt-4 px-8">
+    <div className="text-center mt-4 px-8 md:mb-36 md:mt-20">
       <h2 className="title">Used by entreprenurs</h2>
       <p className="title-desc my-4">
         Proactiv is used by serial entrepreneurs and overachievers.
