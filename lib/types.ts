@@ -1,19 +1,19 @@
-export type typeIconProps = {
-  width?: string;
-  height?: string;
-  className?: any;
-};
-
 export type Option = {
   label: string;
   value: string;
-  price: number;
 };
 
 // Category type with optional options array
 export type CategoryWithOptions = {
   label: string;
+  placeholder: string;
   options: Option[];
+};
+
+export type textInput = {
+  label: string;
+  placeholder: string;
+  type: string;
 };
 
 // Category type for budget without options
@@ -25,12 +25,17 @@ export type BudgetCategory = {
 };
 
 export type FilterObj = {
-  projectType: CategoryWithOptions;
-  design: CategoryWithOptions;
-  development: CategoryWithOptions;
-  numOfPages: CategoryWithOptions;
-  timeline: CategoryWithOptions;
-  platformType: CategoryWithOptions;
-  maintainanceAndSupport: CategoryWithOptions;
-  budget: BudgetCategory; // Using the separate BudgetCategory type
+  name: textInput;
+  email: textInput;
+  platforms: CategoryWithOptions;
+  industry: CategoryWithOptions;
+  country: CategoryWithOptions;
 };
+
+// design: CategoryWithOptions;
+// development: CategoryWithOptions;
+// numOfPages: CategoryWithOptions;
+// timeline: CategoryWithOptions;
+// platformType: CategoryWithOptions;
+// maintainanceAndSupport: CategoryWithOptions;
+// budget: BudgetCategory; // Using the separate BudgetCategory type

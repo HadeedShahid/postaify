@@ -3,7 +3,8 @@ import Navbar from "./navbar";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { ContainerScroll } from "./ui/container-scroll-animation";
-import GetQoute from "./join-waitlist-form";
+import WaitlistForm from "./waitlist-form";
+import Layout from "./ui/layout";
 
 const Hero = () => {
   return (
@@ -26,10 +27,19 @@ const Hero = () => {
                   your social media content effortlessly with just a click.
                 </h2>
               </div>
-              <Button className="mx-auto" size={"lg"}>
-                Book a demo
-              </Button>
-              <GetQoute></GetQoute>
+
+              <Layout
+                title="sample text"
+                description="sample text"
+                triggerContent="Join Waitlist"
+                trigger={
+                  <Button className="mx-auto" size={"lg"}>
+                    Book a demo
+                  </Button>
+                }
+              >
+                <WaitlistForm />
+              </Layout>
             </div>
           }
         >
