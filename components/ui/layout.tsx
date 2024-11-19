@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { ButtonProps } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 interface LayoutProps {
   children: ReactNode; // Main content inside the dialog/drawer
@@ -30,43 +31,36 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   return (
     <>
-      {/* Dialog for screens >= md */}
       <div className="hidden md:block">
         <Dialog>
           <DialogTrigger asChild>
             {trigger || <button {...buttonProps}>{triggerContent}</button>}
           </DialogTrigger>
-          <DialogContent className="max-w-lg space-y-4">
-            {/* Accessible Title */}
-            {title && <DialogTitle>{title}</DialogTitle>}
-
-            {/* Accessible Description */}
+          <DialogContent className="max-w-lg">
+            <div className="flex justify-between content-center">
+              {title && <DialogTitle>{title}</DialogTitle>}
+              <X className="h-4 w-4" />
+            </div>
             {description && (
               <DialogDescription>{description}</DialogDescription>
             )}
-
-            {/* Main Content */}
             <div>{children}</div>
           </DialogContent>
         </Dialog>
       </div>
 
-      {/* Drawer for screens < md */}
       <div className="block md:hidden">
         <Drawer>
           <DrawerTrigger asChild>
             {trigger || <button {...buttonProps}>{triggerContent}</button>}
           </DrawerTrigger>
           <DrawerContent className="fixed inset-x-0 bottom-0 max-h-[75%] bg-white p-6 shadow-lg rounded-t-lg space-y-4">
-            {/* Accessible Title */}
             {title && <DialogTitle>{title}</DialogTitle>}
 
-            {/* Accessible Description */}
             {description && (
               <DialogDescription>{description}</DialogDescription>
             )}
 
-            {/* Main Content */}
             <div>{children}</div>
           </DrawerContent>
         </Drawer>
