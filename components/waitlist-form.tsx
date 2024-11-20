@@ -24,6 +24,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { getQouteCost } from "@/lib/actions";
 
 const WaitlistForm = () => {
   const form = useForm<z.infer<typeof waitlistFormSchema>>({
@@ -39,10 +40,7 @@ const WaitlistForm = () => {
 
   async function onSubmit(values: z.infer<typeof waitlistFormSchema>) {
     console.log(values);
-    // setIsLoading(true);
-    // setTimeout(() => {}, 2000);
-    // setIsLoading(false);
-    // form.reset();
+    getQouteCost(values);
   }
 
   return (
@@ -173,11 +171,9 @@ const WaitlistForm = () => {
 
           <div className="flex justify-between gap-10"></div>
 
-          <div className="flex justify-between gap-10"></div>
-
-          <Button variant={"secondary"} type="submit">
-            Save changes
-          </Button>
+          <div className="w-full text-right">
+            <Button type="submit">Save changes</Button>
+          </div>
         </form>
       </Form>
     </>
