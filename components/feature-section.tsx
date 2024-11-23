@@ -12,32 +12,31 @@ import { twMerge } from "tailwind-merge";
 function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Track issues effectively",
+      title: "Personalized Growth Strategies",
       description:
-        "Track and manage your project issues with ease using our intuitive interface.",
+        "No generic templates here. Get strategies customized to your business goals and industry.",
       skeleton: <SkeletonOne />,
       className:
         "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
     },
     {
-      title: "Capture pictures with AI",
+      title: "Instant Content Generation",
       description:
-        "Capture stunning photos effortlessly using our advanced AI technology.",
+        "Create scroll-stopping posts in seconds. AI-powered suggestions tailored to your brand and audience.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
     {
-      title: "Watch our AI on YouTube",
-      description:
-        "Whether its you or Tyler Durden, you can get to know about our product on YouTube",
+      title: "AI-Powered Creative Ideas",
+      description: "Stuck on what to post? Get unique ideas and content paths",
       skeleton: <SkeletonThree />,
       className:
         "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
     },
     {
-      title: "Deploy in seconds",
+      title: "Content Repurposing Made Easy",
       description:
-        "With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds.",
+        "Turn one great idea into many. Repurpose posts across formats—stories, carousels, and posts with minimal effort.",
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none",
     },
@@ -171,19 +170,15 @@ export const SkeletonTwo = () => {
     },
   };
   return (
-    <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
+    <div className="relative flex flex-col items-start pt-8 gap-10 h-full overflow-hidden">
       {/* TODO */}
-      <div className="flex flex-row">
-        <Image
-          src={"/hero-image.png"}
-          alt="bali images"
-          width="500"
-          height="500"
-          className="rounded-lg object-cover flex-shrink-0"
-        />
-      </div>
-      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
-      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
+      <Image
+        src={"/insta-mockup.png"}
+        alt="bali images"
+        width="260"
+        height="500"
+        className="mx-auto"
+      />
     </div>
   );
 };
