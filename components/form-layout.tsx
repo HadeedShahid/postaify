@@ -1,6 +1,4 @@
-// components/layouts/FormLayout.tsx
 "use client";
-
 import React, { ReactNode, useState } from "react";
 import { ButtonProps } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -21,37 +19,6 @@ interface FormHandlers {
   onError: (message?: string) => void;
 }
 
-interface StatusModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  title: string;
-  message: string;
-  variant: "success" | "error";
-}
-
-const StatusModal: React.FC<StatusModalProps> = ({
-  isOpen,
-  onClose,
-  title,
-  message,
-  variant,
-}) => (
-  <Dialog open={isOpen} onOpenChange={onClose}>
-    <DialogContent className="sm:max-w-[425px]">
-      <Alert
-        className={
-          variant === "success"
-            ? "border-green-500 bg-green-50"
-            : "border-red-500 bg-red-50"
-        }
-      >
-        <AlertTitle>{title}</AlertTitle>
-        <AlertDescription>{message}</AlertDescription>
-      </Alert>
-    </DialogContent>
-  </Dialog>
-);
-
 const FormLayout = ({
   children,
   title,
@@ -61,23 +28,10 @@ const FormLayout = ({
   trigger,
 }: FormLayoutProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [showError, setShowError] = useState(false);
-  const [statusMessage, setStatusMessage] = useState("");
 
-  const handleSuccess = (message?: string) => {
-    setStatusMessage(message || "Form submitted successfully!");
-    setShowSuccess(true);
-    setTimeout(() => {
-      setShowSuccess(false);
-      setIsOpen(false);
-    }, 2000);
-  };
+  const handleSuccess = (message?: string) => {};
 
-  const handleError = (message?: string) => {
-    setStatusMessage(message || "An error occurred. Please try again.");
-    setShowError(true);
-  };
+  const handleError = (message?: string) => {};
 
   return (
     <>
@@ -94,22 +48,6 @@ const FormLayout = ({
           ? children({ onSuccess: handleSuccess, onError: handleError })
           : children}
       </Layout>
-
-      <StatusModal
-        isOpen={showSuccess}
-        onClose={() => setShowSuccess(false)}
-        title="Success!"
-        message={statusMessage}
-        variant="success"
-      />
-
-      <StatusModal
-        isOpen={showError}
-        onClose={() => setShowError(false)}
-        title="Error"
-        message={statusMessage}
-        variant="error"
-      />
     </>
   );
 };
