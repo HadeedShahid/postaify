@@ -28,17 +28,7 @@ const Hero = () => {
                 </h2>
               </div>
 
-              <Layout
-                title="Join the Waitlist"
-                description="Join our exclusive waitlist and gain early access to an AI-driven platform designed to revolutionize social media growth."
-                trigger={
-                  <Button className="mx-auto" size={"lg"}>
-                    Book a demo
-                  </Button>
-                }
-              >
-                <WaitlistForm />
-              </Layout>
+              <WaitlistForm />
             </div>
           }
         >

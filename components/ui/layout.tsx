@@ -1,3 +1,4 @@
+// components/layouts/Layout.tsx
 "use client";
 
 import React, { ReactNode } from "react";
@@ -9,37 +10,44 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import { ButtonProps } from "@/components/ui/button";
+import { Button, ButtonProps } from "@/components/ui/button";
 import { X } from "lucide-react";
 
 interface LayoutProps {
-  children: ReactNode; // Main content inside the dialog/drawer
-  title?: string; // Title for the dialog/drawer
-  description?: string; // Description for the dialog/drawer
-  triggerContent?: ReactNode; // Content for the default trigger button
-  buttonProps?: ButtonProps; // Props for the Shadcn Button
-  trigger?: ReactNode; // Custom trigger to be rendered outside
+  children: ReactNode;
+  title?: string;
+  description?: string;
+  triggerContent?: ReactNode;
+  buttonProps?: ButtonProps;
+  trigger?: ReactNode;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
-const Layout: React.FC<LayoutProps> = ({
+const Layout = ({
   children,
   title,
   description,
   triggerContent,
   buttonProps = {},
   trigger,
-}) => {
+  open,
+  onOpenChange,
+}: LayoutProps) => {
   return (
     <>
       <div className="hidden md:block">
-        <Dialog>
+        <Dialog open={open} onOpenChange={onOpenChange}>
           <DialogTrigger asChild>
-            {trigger || <button {...buttonProps}>{triggerContent}</button>}
+            {trigger || <Button {...buttonProps}>{triggerContent}</Button>}
           </DialogTrigger>
           <DialogContent className="max-w-lg">
-            <div className="flex justify-between content-center">
+            <div className="flex justify-between items-center">
               {title && <DialogTitle>{title}</DialogTitle>}
-              <X className="h-4 w-4" />
+              <X
+                className="h-4 w-4 cursor-pointer hover:opacity-75"
+                onClick={() => onOpenChange?.(false)}
+              />
             </div>
             {description && (
               <DialogDescription>{description}</DialogDescription>
@@ -50,17 +58,15 @@ const Layout: React.FC<LayoutProps> = ({
       </div>
 
       <div className="block md:hidden">
-        <Drawer>
+        <Drawer open={open} onOpenChange={onOpenChange}>
           <DrawerTrigger asChild>
             {trigger || <button {...buttonProps}>{triggerContent}</button>}
           </DrawerTrigger>
           <DrawerContent className="fixed inset-x-0 bottom-0 max-h-[75%] bg-white p-6 shadow-lg rounded-t-lg space-y-4">
             {title && <DialogTitle>{title}</DialogTitle>}
-
             {description && (
               <DialogDescription>{description}</DialogDescription>
             )}
-
             <div>{children}</div>
           </DrawerContent>
         </Drawer>
