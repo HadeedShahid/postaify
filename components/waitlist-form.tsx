@@ -112,8 +112,10 @@ const WaitlistForm = () => {
                     <FormLabel>{filterObj.platforms.label}</FormLabel>
                     <MultiSelect
                       options={filterObj.platforms.options}
-                      onChange={(values) => {
-                        field.onChange(values.map((option) => option.value));
+                      onChange={(values: any) => {
+                        field.onChange(
+                          values.map((option: any) => option.value)
+                        );
                       }}
                       placeholder={filterObj.platforms.placeholder}
                     />
